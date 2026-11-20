@@ -1,0 +1,8 @@
+# Packaging outputs
+dist/
+*.zip
+
+# OS & Python artifacts
+.DS_Store
+__pycache__/
+*.pyc

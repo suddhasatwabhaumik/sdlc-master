@@ -1,0 +1,33 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "sdlc-master-orchestrator",
+  "displayName": "SDLC Master Orchestrator",
+  "version": "1.0.0",
+  "description": "End-to-end SDLC skill suite: architecture shootdowns, disjoint parallel coding, multi-viewpoint PR review, Python patterns & readability, and Socratic coaching.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Use sdlc-master-orchestrator to design and implement a new feature end-to-end",
+    "Run a full Goldfish multi-viewpoint review and remediation pass on my current feature branch",
+    "Quiz me on my uncommitted changes before I commit (Explain My Changes)"
+  ],
+  "author": {
+    "name": "Suddhasatwa Bhaumik",
+    "url": "https://github.com/suddhasatwabhaumik"
+  },
+  "homepage": "https://github.com/suddhasatwabhaumik/sdlc-master#readme",
+  "repository": "https://github.com/suddhasatwabhaumik/sdlc-master",
+  "license": "Apache-2.0",
+  "keywords": [
+    "antigravity",
+    "gemini",
+    "sdlc",
+    "orchestrator",
+    "elephant-goldfish",
+    "code-review",
+    "pr-review",
+    "architecture",
+    "python",
+    "release-notes",
+    "code-mentor"
+  ]
+}

@@ -1,0 +1,34 @@
+name: Validate Antigravity Plugin
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run plugin integrity and sanitization checks
+        run: python3 scripts/validate_plugin.py
+
+      - name: Build distributable plugin archive
+        run: |
+          chmod +x scripts/package_plugin.sh
+          ./scripts/package_plugin.sh
+
+      - name: Upload plugin archive artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sdlc-master-orchestrator-plugin
+          path: dist/*.zip
